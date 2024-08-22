@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+//    kotlin("multiplatform") version "1.9.20" // or kotlin("jvm") or any other kotlin plugin
+//    kotlin("plugin.serialization") version "1.9.20"
 }
 
 android {
@@ -64,6 +66,9 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.google.code.gson:gson:2.9.0")
+
+    implementation("com.google.firebase:firebase-firestore-ktx:25.0.0")
+    implementation("com.google.firebase:firebase-auth-ktx:23.0.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
